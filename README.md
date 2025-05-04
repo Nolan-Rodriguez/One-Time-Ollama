@@ -13,7 +13,7 @@ curl -O https://raw.githubusercontent.com/Nolan-Rodriguez/One-Time-Ollama/refs/h
 ```
 
 # Notes
-- After you finish chatting with the AI. The script will uninstall Ollama. Part of the uninstallation is removing the ollama user and group. For some reason, when doing so userdel will give the following message:
+- After you finish chatting with the AI. The script will uninstall Ollama. Part of the uninstallation is removing the ollama user and group. When doing so, userdel will give the following message:
 
   `userdel: group ollama not removed because it has other members.`
 
