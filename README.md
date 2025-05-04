@@ -15,6 +15,6 @@ curl -O https://raw.githubusercontent.com/Nolan-Rodriguez/One-Time-Ollama/refs/h
 # Notes
 - After you finish chatting with the AI. The script will uninstall Ollama. Part of the uninstallation is removing the ollama user and group. For some reason, when doing so userdel will give the following message:
 
-  `userdel: group ollama not removed because it has other members."`
+  `userdel: group ollama not removed because it has other members.`
 
-  i'm not sure why, but this is a false alarm, as it actually does remove the ollama group, at least in my testing.
+  I'm not sure why, but this is a false alarm. Based on my tests, It always says that, but does still remove the ollama group.
