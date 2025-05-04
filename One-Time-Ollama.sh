@@ -1,13 +1,18 @@
 #!/bin/bash
 
-# Function to install Ollama
-install_ollama() {
-    echo "Downloading and installing Ollama..."
+# Install Ollama
+    echo "Installing Ollama..."
     curl -fsSL https://ollama.com/install.sh | sh
-}
 
-# Function to uninstall Ollama
-uninstall_ollama() {
+# Select model
+echo "Find models at https://ollama.com/search"
+read -p "Select model (Model:Tag): " model_name
+
+# Run model
+echo "Running $model_name"
+ollama run "$model_name"
+
+# Uninstall Ollama
     echo "Uninstalling Ollama..."
     sudo systemctl stop ollama
     sudo systemctl disable ollama
@@ -17,19 +22,3 @@ uninstall_ollama() {
     sudo userdel ollama
     sudo groupdel ollama
     sudo rm -rf /usr/local/lib/ollama
-}
-
-# Install Ollama
-install_ollama
-
-# Ask for the model
-echo "What model would you like to run?"
-read -p "Enter the model you want to use: " model_name
-
-# Run the selected model
-echo "Running $model_name"
-ollama run "$model_name"
-
-# Uninstall Ollama
-echo "Uninstalling Ollama"
-uninstall_ollama
