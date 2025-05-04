@@ -8,7 +8,9 @@ This is a simple script I made that does the following:
 # Usage
 run the following command:
 
-`curl -O https://raw.githubusercontent.com/Nolan-Rodriguez/One-Time-Ollama/refs/heads/main/One-Time-Ollama.sh && chmod +x One-Time-Ollama.sh && ./One-Time-Ollama.sh`
+```
+curl -O https://raw.githubusercontent.com/Nolan-Rodriguez/One-Time-Ollama/refs/heads/main/One-Time-Ollama.sh && chmod +x One-Time-Ollama.sh && ./One-Time-Ollama.sh
+```
 
 # Notes
 - After you finish chatting with the AI. The script will uninstall Ollama. Part of the uninstallation is removing the ollama user and group. For some reason, when doing so userdel will give the following message:
