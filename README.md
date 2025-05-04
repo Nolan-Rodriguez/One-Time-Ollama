@@ -13,6 +13,6 @@ run the following command:
 # Notes
 - After you finish chatting with the AI. The script will uninstall Ollama. Part of the uninstallation is removing the ollama user and group. For some reason, when doing so userdel will give the following message:
 
-`userdel: group ollama not removed because it has other members."`
+  `userdel: group ollama not removed because it has other members."`
 
-i'm not sure why, but this is a false alarm, as it actually does remove the ollama group, at least in my testing.
+  i'm not sure why, but this is a false alarm, as it actually does remove the ollama group, at least in my testing.
